@@ -19,7 +19,7 @@ Meteor.cordova_g_plus = function(request, callback) {
         },
         function(response) {
             request.email = response.email;
-            request.oAuthToken = response.idToken;
+            request.idToken = response.idToken;
             request.sub = response.userId;
 
             Accounts.callLoginMethod({ // call cordova_g_plus SignIn handler @ server
